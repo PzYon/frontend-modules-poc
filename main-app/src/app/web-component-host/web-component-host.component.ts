@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
+import {Component, OnInit, Type, ViewChild, ViewContainerRef} from '@angular/core';
 import {loadRemoteModule} from "@angular-architects/native-federation";
 
 @Component({
@@ -12,25 +12,19 @@ export class WebComponentHostComponent implements OnInit {
   @ViewChild('placeHolder', {read: ViewContainerRef})
   viewContainer!: ViewContainerRef;
 
-  constructor() {
-  }
-
   ngOnInit(): void {
     this.load();
   }
 
   async load(): Promise<void> {
 
-    const m = await loadRemoteModule({
+    const remoteModule = await loadRemoteModule<{ AppComponent: Type<{ sampleParameter: string }> }>({
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
       exposedModule: './Component'
     });
 
-
-
-    const ref = this.viewContainer.createComponent(m.AppComponent);
-    // const compInstance = ref.instance;
-    // compInstance.ngOnInit()
+    const ref = this.viewContainer.createComponent(remoteModule.AppComponent);
+    ref.setInput("sampleParameter", "Gusti");
   }
 
 }
