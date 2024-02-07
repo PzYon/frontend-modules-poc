@@ -8,5 +8,8 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
+  "scripts":{
+    "build": "ng build angular-library"
+  },
   "sideEffects": false
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WebComponentHostComponent } from './web-component-host/web-component-host.component';
+import { AngularLibraryService } from 'angular-library';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,8 @@ import { WebComponentHostComponent } from './web-component-host/web-component-ho
 })
 export class AppComponent {
   title = 'main-app';
+
+  constructor(public libraryService: AngularLibraryService) {
+    this.libraryService.getRandomValue();
+  }
 }

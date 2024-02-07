@@ -1,0 +1,42 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "src/main.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts",
+    "node_modules\\prettier\\index.mjs",
+    "node_modules\\prettier\\doc.mjs",
+    "node_modules\\prettier\\standalone.mjs",
+    "node_modules\\prettier\\plugins\\estree.mjs",
+    "node_modules\\prettier\\plugins\\babel.mjs",
+    "node_modules\\prettier\\plugins\\flow.mjs",
+    "node_modules\\prettier\\plugins\\typescript.mjs",
+    "node_modules\\prettier\\plugins\\acorn.mjs",
+    "node_modules\\prettier\\plugins\\meriyah.mjs",
+    "node_modules\\prettier\\plugins\\angular.mjs",
+    "node_modules\\prettier\\plugins\\postcss.mjs",
+    "node_modules\\prettier\\plugins\\graphql.mjs",
+    "node_modules\\prettier\\plugins\\markdown.mjs",
+    "node_modules\\prettier\\plugins\\glimmer.mjs",
+    "node_modules\\prettier\\plugins\\html.mjs",
+    "node_modules\\prettier\\plugins\\yaml.mjs",
+    "node_modules\\prettier\\plugins\\babel.js",
+    "node_modules\\prettier\\plugins\\flow.js",
+    "node_modules\\prettier\\plugins\\typescript.js",
+    "node_modules\\prettier\\plugins\\acorn.js",
+    "node_modules\\prettier\\plugins\\meriyah.js",
+    "node_modules\\prettier\\plugins\\angular.js",
+    "node_modules\\prettier\\plugins\\postcss.js",
+    "node_modules\\prettier\\plugins\\graphql.js",
+    "node_modules\\prettier\\plugins\\markdown.js",
+    "node_modules\\prettier\\plugins\\glimmer.js",
+    "node_modules\\prettier\\plugins\\html.js",
+    "node_modules\\prettier\\plugins\\yaml.js",
+    "node_modules\\angular-library\\fesm2022\\angular-library.mjs"
+  ]
+}
