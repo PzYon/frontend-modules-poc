@@ -12,7 +12,5 @@ import { AngularLibraryService } from 'angular-library';
 export class AppComponent {
   title = 'main-app';
 
-  constructor(public libraryService: AngularLibraryService) {
-    this.libraryService.getRandomValue();
-  }
+  constructor(public libraryService: AngularLibraryService) {}
 }
